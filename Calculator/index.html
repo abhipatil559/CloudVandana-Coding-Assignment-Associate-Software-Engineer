@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple JavaScript Calculator</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main " id="grad">
+      <div
+        class="container align-items-center justify-content-center text-center"
+      >
+        <h2>Calculator</h2>
+
+        <form name="form1">
+          <!-- <input class="display" type="text" name="text1" value="" size="36" /> -->
+          <div class="keys">
+            <input class="display" type="text" name="text1" value="" size="36" /> 
+            <input class="key" type="button" value="C" onclick="calc('C')" />
+
+            <input class="key" type="button" value="9" onclick="calc('9')" />
+            <input class="key" type="button" value="8" onclick="calc('8')" />
+            <input class="key" type="button" value="7" onclick="calc('7')" />
+            <input class="key" type="button" value="+" onclick="calc('+')" />
+
+            <input class="key" type="button" value="4" onclick="calc('4')" />
+            <input class="key" type="button" value="5" onclick="calc('5')" />
+            <input class="key" type="button" value="6" onclick="calc('6')" />
+            <input class="key" type="button" value="-" onclick="calc('-')" />
+
+            <input class="key" type="button" value="1" onclick="calc('1')" />
+            <input class="key" type="button" value="2" onclick="calc('2')" />
+            <input class="key" type="button" value="3" onclick="calc('3')" />
+            <input class="key" type="button" value="/" onclick="calc('/')" />
+
+            <input class="key" type="button" value="." onclick="calc('.')" />
+            <input class="key" type="button" value="0" onclick="calc('0')" />
+            <input class="key" type="button" value="=" onclick="calc('=')" />
+            <input class="key" type="button" value="*" onclick="calc('*')" />
+         
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

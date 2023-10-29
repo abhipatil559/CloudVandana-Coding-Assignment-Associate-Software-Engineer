@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Survey Form</title>
+    <link rel="stylesheet" href="design.css" />
+  </head>
+
+  <body>
+    <h1>Customer Survey Form</h1>
+    <div class="container">
+      <form action="#" id="myForm">
+        <!-- EMAIL AND NAME ROW START-->
+        <div class="form-row">
+          <!-- first row -->
+          <div class="input-box">
+            <label for="fname">First Name</label>
+            <input
+              type="text"
+              id="fname"
+              name="fname"
+              value=""
+              required
+              autocomplete="off"
+            />
+          </div>
+          <div class="input-box">
+            <label for="lname">Last Name</label>
+            <input
+              type="text"
+              id="lname"
+              name="lname"
+              value=""
+              required
+              autocomplete="off"
+            />
+          </div>
+          <!-- second row -->
+          <div class="input-box">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value=""
+              required
+              autocomplete="off"
+            />
+          </div>
+          <div class="input-box">
+            <label for="phoneNo">Phone No.</label>
+            <input
+              type="number"
+              id="phoneNo"
+              name="phoneNo"
+              value=""
+              required
+            />
+          </div>
+          <!-- third row -->
+          <div class="input-box">
+            <label for="date">Date of Birth</label>
+            <input type="date" id="date" name="date" value="" required />
+          </div>
+          <div class="input-box">
+            <label for="country">Your Country</label>
+            <select class="form-select" id="country" name="country" required>
+              <option value="">select country</option>
+              <option value="AF">Afghanistan</option>
+              <option value="IN">India</option>
+              <option value="AX">Aland Islands</option>
+            </select>
+          </div>
+          <!-- forth row -->
+
+          <div class="input-box">
+            <label for="gender">Gender</label>
+            <select class="gender" id="gender" name="gender" required>
+              <option value="">select gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="input-box">
+            <label for="profession">Profession</label>
+            <input
+              type="text"
+              id="profession"
+              name="profession"
+              value=""
+              required
+            />
+          </div>
+        </div>
+        <!-- EMAIL AND NAME ROW END-->
+
+        <!-- FIRST TIME USING START-->
+        <label for="product_services"
+          >Is this your first time using our products or service?</label
+        >
+        <div class="radio-group" id="product_services">
+          <input type="radio" id="yes" name="first_time" value="Yes" required />
+          <label for="yes">Yes</label>
+
+          <input type="radio" id="no" name="first_time" value="No" required />
+          <label for="no">No</label>
+        </div>
+        <!-- FIRST TIME USING END-->
+
+        <!-- SUGGESTION TO FRIENDS START-->
+        <label for="suggest_friends"
+          >Would you suggestion to your friends and colleague?</label
+        >
+        <div class="radio-group" id="suggest_friends">
+          <input type="radio" id="y" name="sf" value="Yes" required />
+          <label for="y">Yes</label>
+
+          <input type="radio" id="n" name="sf" value="No" required />
+          <label for="n">No</label>
+        </div>
+        <!-- SUGGESTION TO FRIENDS END-->
+
+        <!-- SATISFACTION START -->
+
+        <label for="satisfaction"
+          >How satisfied are you with our company overall?</label
+        >
+
+        <div class="radio-group">
+          <input
+            type="radio"
+            id="satisfied"
+            name="satisfaction"
+            value="satisfied"
+            required
+          />
+          <label for="satisfied">Satisfied</label>
+
+          <input
+            type="radio"
+            id="undecided"
+            name="satisfaction"
+            value="undecided"
+            required
+          />
+          <label for="undecided">Undecided</label>
+
+          <input
+            type="radio"
+            id="unsatisfied"
+            name="satisfaction"
+            value="unsatisfied"
+            required
+          />
+          <label for="unsatisfied">Unsatisfied</label>
+        </div>
+        <!-- SATISFACTION END -->
+
+        <label for="suggestions"
+          >Do you have suggestions to improve our service?</label
+        >
+        <textarea id="suggestions" name="suggestions" required></textarea>
+
+        <input type="submit" id="submitButton" value="Submit" />
+        <input type="reset" value="Reset" />
+      </form>
+
+      <!-- getting data from form and dispalay in modal -->
+      <div class="modal" id="myModal">
+        <div class="modal-content">
+          <div>
+            <p>Your Info</p>
+            <span onclick="resetform()" class="close">&times;</span>
+          </div>
+
+          <p id="modalFullName"></p>
+          <p id="modalEmail"></p>
+          <p id="modalPhoneNumber"></p>
+          <p id="modalDOB"></p>
+          <p id="modalCountry"></p>
+          <p id="modalGender"></p>
+          <p id="modalProfession"></p>
+          <p id="modalFirstTimeService"></p>
+          <p id="modalSuggestFriends"></p>
+          <p id="modalSatisfied"></p>
+          <p id="modalAnySuggestion"></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="./modal.js"></script>
+  </body>
+</html>
